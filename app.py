@@ -305,7 +305,7 @@ st.markdown("""
 st.markdown("""
 <div class="header-box">
 <h1>🌾 Precision Agriculture Analytics</h1>
-<p>Advanced pixel-level pest risk & nutrient stress analysis using drone imagery</p>
+<p>Pest risk & nutrient stress analysis using drone imagery</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -430,7 +430,7 @@ def confidence_score(veg, stress):
 # ======================================================
 # SIDEBAR
 # ======================================================
-st.sidebar.header("🚜 Drone Image Input")
+st.sidebar.header("🛰 Drone Image Input")
 uploaded = st.sidebar.file_uploader("Upload Crop Field Image", ["jpg","jpeg","png"])
 run = st.sidebar.button("🌱 Analyze Field")
 
@@ -469,7 +469,7 @@ if uploaded and run:
 
     # ---------------- IMAGES ----------------
     st.markdown("<br>", unsafe_allow_html=True)
-    st.subheader("🛰️ Pixel-Level Field Visualization")
+    st.subheader("🛰 Field Visualization")
 
     c1, c2 = st.columns(2)
     with c1:
@@ -480,4 +480,5 @@ if uploaded and run:
                  use_container_width=True)
 
 else:
-    st.info("⬅ Upload a drone image to begin advanced pixel-level analysis.")
+    st.info("⬅ Upload a drone image to begin analysis.")
+
